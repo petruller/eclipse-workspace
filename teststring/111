@@ -1,0 +1,55 @@
+//218 строка
+		if(!strcmp(argv[1], "r"))
+		{
+        record_r();
+
+
+	       } else if (!strcmp(argv[1], "d"))
+	       {
+	     read_d();
+	       }
+	       else if(!strcmp(argv[1], "f"))
+		   {
+	    	   dopis_f();
+		   }//else "f"
+	       else if (!strcmp(argv[1], "rf"))
+	       {
+	    	   readfile_rf();
+
+	       }//rf
+	       else if (!strcmp(argv[1], "-h"))
+	      	       {
+	    	 help();
+	      	       }//-h
+	       else if(!strcmp(argv[1], "rl"))
+	       		   {
+	    	   recordline_rl(argv[2],argv[3],argv[4],argv[5],argv[6],argv[7],argv[8],argv[9]);
+	       		   }//rl
+	       }//arg 1
+	       
+//217 строка 2я версия
+
+string argument;
+	if (argc > 1)// если передаем аргументы, то argc будет больше 1(в зависимости от кол-ва аргументов)
+	       {
+		argument = argv[1];
+		switch(argument[0])
+		//if(!strcmp(argv[1], "r"))
+		{
+		case 'r' : record_r();
+		 break;
+		case 'd':   read_d();
+		 break;
+		case 'f':    dopis_f();
+		 break;
+		case 'k':  readfile_rf();
+		 break;
+	    case 'h': help();
+	     break;
+	    case 'l':	recordline_rl(argv[2],argv[3],argv[4],argv[5],argv[6],argv[7],argv[8],argv[9]);
+	     break;
+
+		}//case
+		}//arg 1
+
+	       
