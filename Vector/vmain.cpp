@@ -164,15 +164,6 @@ default: cout<< "no command"<<endl;
 
 }
 
-/*
-	vector <string> str = {"hello","world","giiii"};
-	for(int t=0; t<10;t++)
-		str.push_back("malina");
-
-	str.insert(str.begin(),"metla");
-	for(int i=0; i<13; i++)
-		cout << str.at(i)<< "  ";
-*/
 
 }
 
