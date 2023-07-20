@@ -9,45 +9,26 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include <cstdlib>
 using namespace std;
 
-struct Person{
-	string name;
-	int age;
 
 
-};
 
 
-vector <Person> per;
 vector <int> a = {3,6,7,8};
 
  //using blya
 
-string name[] = {"Alexander", "Dmitry", "Evgeny", "Ivan", "Kirill", "Maxim", "Nikolay", "Pavel", "Sergey", "Vladimir"};
+
 
 int main()
 {
-
 cout<<"Hello!"<<endl;
-for(int t1=0; t1<=20; t1++)
-{
-	int w=rand()%70+18;
-	per.push_back({name[rand()%10], w});
+
+for(int i=0; i<=3; i++)
+	cout<< a[i] << " ";
 }
-for(int i=0; i<=20; i++)
-a.push_back(i+35);
-	//	cout<< a[i] << " ";
 
-for(unsigned int t=0; t<a.size(); t++ )
-	cout<< a[t]<<" ";
-
-cout<<endl<<endl;
-for(auto el : per)
-	cout<<el.name << " - "<<el.age<<endl;
-
-}
 /*
 struct Mot {
 	char *a;
