@@ -15,7 +15,7 @@ bool descendingComparator(int a, int b) {
 }
 
 
-vector <int> intdim = {3,7,44,3,22,45,65,23,1,51,34,22,44};
+vector <int> intdim = {3,55,34,72,5,36,11,7,44,3,22,45,65,23,1,51,34,22,44};
 vector <Person> Per;
 //vector <int> age;
 

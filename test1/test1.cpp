@@ -8,6 +8,8 @@
 
  using namespace std;
  using std::vector;
+
+ //сортировка
  bool descendingComparator(int a, int b) {
      return a > b;
  }
@@ -28,7 +30,7 @@ for(auto il: intdim)
 
 return 0;
 }
-
+//сорт конец*/
 
 
 
