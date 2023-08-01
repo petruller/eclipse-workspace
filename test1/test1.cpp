@@ -4,48 +4,73 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include<string>
+
  using namespace std;
  using std::vector;
-struct person  {
-    string name;
-    int age;
-};
-vector<int> chislo;
-vector<int> randchisl;
-vector<string> str;
-ofstream file;
-void show_vector( vector<int>&a)
-{
-    for (vector<int>::iterator it = a.begin() ; it!=a.end() ; ++it)
-        file<<*it << " ";
-    file<<endl;
+ bool descendingComparator(int a, int b) {
+     return a > b;
+ }
+
+
+vector <int> intdim = {3,7,44,3,22,45,65,23,1,51,34,22,44};
+int main(){
+
+	sort(intdim.begin(), intdim.end());
+for(auto il: intdim)
+	cout<<il<<" ";
+
+cout<<endl;
+
+sort(intdim.begin(), intdim.end(), descendingComparator);
+for(auto il: intdim)
+	cout<<il<<" ";
+
+return 0;
 }
-void show_vector_str( vector<string>&a)
-{
-    for (vector<string>::iterator it = a.begin() ; it!=a.end() ; ++it)
-        file<<*it << " ";
-    file<<endl;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+string prevk[] = {"Hello","Hi","Privet","Bomjur","love"};
+char  cmas[] = {'H','e','l','l','o'};
+int chislo[] = {5,8,5,5,8,5,6};
 int main()
 {
-	file.open("1.txt");
-	for(int t=0; t<20;t++)
-		str.push_back("c++");
-	srand ( 1 );
-	 for(int t=0; t<30;t++)
-		 randchisl.push_back(rand()%100);
+vector <string> voop(prevk,prevk+5);
 
-    for (int i=0;i <11;i++)
-   chislo.push_back(i+4);
-
-   cout <<"vector :"<<endl;
- // for(auto const& p: chislo)
-//  copy(chislo.begin(), chislo.end(), std::ostream_iterator<int>(std::cout," ")) ;
-   show_vector(chislo);
-   cout <<endl;
-   show_vector(randchisl);
-   cout <<endl;
-      show_vector_str(str);
-      file.close();
-    return 0;
-}
+	/*string *s =&prevk[0];
+	int siz=sizeof(prevk)/sizeof(prevk[0]);
+	for (int i=0; i<=siz; i++)
+	{	cout<<*s<<" ";
+	s++;
+	}*/
+/*
+for(auto t: voop)
+	cout<< t<<endl;
+cout <<endl<<"string"<<endl;
+cout << sizeof(string)<<endl;
+cout<< sizeof(prevk)<<endl;
+cout<< sizeof(prevk)/sizeof(string)<<endl<<endl;
+cout<<"first element string "<<sizeof(prevk[0])<<endl;
+cout <<"char"<<endl;
+cout << sizeof(char)<<endl;
+cout<< sizeof(cmas)<<endl;
+cout<< sizeof(cmas)/sizeof(char)<<endl<<endl;
+cout<<"first element char "<<sizeof(cmas[0])<<endl;
+cout <<"int"<<endl;
+cout << sizeof(int)<<endl;
+cout<< sizeof(chislo)<<endl;
+cout<< sizeof(chislo)/sizeof(int)<<endl<<endl;
+cout<<"first element int "<<sizeof(chislo[0])<<endl;
+return 0;
+}*/
