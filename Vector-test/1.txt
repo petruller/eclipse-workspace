@@ -1,0 +1,13 @@
+Person list:
+Alexander 72
+Dmitry    65
+Evgeny    55
+Ivan      51
+Kirill    45
+Maxim     44
+Nikolay   44
+Pavel     36
+Sergey    34
+Vladimir  34
+
+

@@ -4,6 +4,7 @@
 #include <string>
  #include <iomanip>
 #include <algorithm>
+#include <fstream>
 using namespace std;
 
 struct Person {
@@ -13,9 +14,9 @@ struct Person {
 bool descendingComparator(int a, int b) {
     return a > b;
 }
+ofstream file;
 
-
-vector <int> intdim = {3,55,34,72,5,36,11,7,44,3,22,45,65,23,1,51,34,22,44};
+vector <int> intdim = {24,40,52,23,42,27,51,46,30,32};
 vector <Person> Per;
 //vector <int> age;
 
@@ -37,15 +38,30 @@ int main()
 
 
 	int ran, nran;
-	for(int i=0; i<20; i++)
-	{ran= rand()%62+18;
-	 nran=rand()%10;
-		Per.push_back({ran,Mname[nran]});
+	for(int i=9; i>=0; i--)
+	{ran= rand()%35+18;
+	// nran=rand()%10;
+		Per.push_back({intdim[i],Mname[i]});
+//cout<<ran<<",";
 	}
 	cout << "Person list:"<<endl;
-	for(auto el : Per)
-		cout << el.name <<setw(12-el.name.length())<<el.age<<endl;
-	cout<< endl<<endl;
+		for(auto el : Per)
+			cout << el.name <<setw(12-el.name.length())<<el.age<<endl;
+		cout<< endl<<endl;
+/*//запись в файл
+	file.open("1.txt");
+	if (file.is_open()) {
+
+	file << "Person list:"<<endl;
+		for(auto el : Per)
+			file << el.name <<setw(12-el.name.length())<<el.age<<endl;
+		file<< endl<<endl;
+
+	}
+	file.close();
+*/
+
+
 	vector <Person> copper(Per); //копия векторов
 
 	cout << "Person list copy:"<<endl;
