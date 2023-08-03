@@ -14,7 +14,11 @@
 	 int age;
 
  };
+struct pair1{
+	 int a;
+	 int b;
 
+ };
  bool ascendingComparator(const std::pair<int, int>& a, const std::pair<int, int>& b) {
      return a.first < b.first;
  }
@@ -24,20 +28,22 @@ int arsize=10;
  vector <Person> Per;
   string Mname[] = {"Alexander", "Dmitry", "Evgeny", "Ivan", "Kirill", "Maxim", "Nikolay", "Pavel", "Sergey", "Vladimir"};
 
-
+	vector <pair1> pairedArray;
  int main()
  {
-	vector<pair<int, int>> pairedArray;
+
 
 	    for (int i = 0; i < arsize; ++i) {
-	        pairedArray.push_back(make_pair(intdim[i], i));
+	      //
+	    	pairedArray.push_back({intdim[i], i});
 	    }
 
 	    // Сортируем вектор пар по возрастанию значения элемента
 	     std::sort(pairedArray.begin(), pairedArray.end(), ascendingComparator);
 
 	     for (const auto& pair : pairedArray) {
-	           cout << "Имя: "<<Mname[pair.second]<<" Возраст: "  << pair.first<<endl;
+	           cout << "Имя: "<<Mname[pair.a]<<
+	        		   " Возраст: "  << pair.b<<endl;
 	         }
 
 /*
