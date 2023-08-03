@@ -5,29 +5,50 @@
 #include <vector>
 #include <fstream>
 #include<string>
-
+ #include <iomanip>
  using namespace std;
  using std::vector;
 
- //сортировка
- bool descendingComparator(int a, int b) {
-     return a > b;
+ struct Person {
+	 string name;
+	 int age;
+
+ };
+
+ bool ascendingComparator(const std::pair<int, int>& a, const std::pair<int, int>& b) {
+     return a.first < b.first;
  }
 
+int arsize=10;
+ int intdim[] = {24,40,52,23,42,27,51,46,30,32};
+ vector <Person> Per;
+  string Mname[] = {"Alexander", "Dmitry", "Evgeny", "Ivan", "Kirill", "Maxim", "Nikolay", "Pavel", "Sergey", "Vladimir"};
 
-vector <int> intdim = {3,7,44,3,22,45,65,23,1,51,34,22,44};
-int main(){
 
-	sort(intdim.begin(), intdim.end());
-for(auto il: intdim)
-	cout<<il<<" ";
+ int main()
+ {
+	vector<pair<int, int>> pairedArray;
 
-cout<<endl;
+	    for (int i = 0; i < arsize; ++i) {
+	        pairedArray.push_back(make_pair(intdim[i], i));
+	    }
 
-sort(intdim.begin(), intdim.end(), descendingComparator);
-for(auto il: intdim)
-	cout<<il<<" ";
+	    // Сортируем вектор пар по возрастанию значения элемента
+	     std::sort(pairedArray.begin(), pairedArray.end(), ascendingComparator);
 
+	     for (const auto& pair : pairedArray) {
+	           cout << "Имя: "<<Mname[pair.second]<<" Возраст: "  << pair.first<<endl;
+	         }
+
+/*
+
+	for(int i=0; i<10; i++)
+{
+Per.push_back({Mname[i],intdim[i]});
+}
+	 for(auto el: Per)
+		 cout<<el.name<<setw(12-el.name.length())<<el.age<<endl;
+*/
 return 0;
 }
 //сорт конец*/
