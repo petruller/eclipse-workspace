@@ -2,7 +2,7 @@
 #include <stdio.h>
 //# include <algorithm>
 #include <iostream>
-//#include <vector>
+#include <vector>
 #include <fstream>
 #include <string.h>
  #include <iomanip>
@@ -10,21 +10,31 @@
  using namespace std;
  //using std::vector;
 
-//vector <string> vsss = {"aaa","bbb","ccc","ddd"};
+vector <string> vsss = {"aaa","bbb","ccc","ddd"};
 
  // vector <string> vsss(sss,sss+4);
 char st1[]="Put on the old blue song";
+char st2[]="Put on the old blue song";
 char *tokenst;
+
+void zero(long a[]); //прототип
 int main()
   {
 	  tokenst=strtok(st1," ");
+	//
+	   //  tokenst=strtok(NULL," ");
+	    //  cout<<tokenst<<'\n';
+	      strcat(st2," hahaha");
+	      cout<<st2<<endl;
+
 
 	  while(tokenst!=NULL)
 	  {
-		  cout<<tokenst<<'\n';
+        cout<<tokenst<<'\n';
 		  tokenst=strtok(NULL, " ");
 	  }
-
+for(auto el: vsss)
+	cout<<el<<" ";
       return 0;
   }
 
