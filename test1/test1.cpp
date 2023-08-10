@@ -1,14 +1,34 @@
-#include <cstdlib>
+//#include <cstdlib>
 #include <stdio.h>
-# include <algorithm>
+//# include <algorithm>
 #include <iostream>
-#include <vector>
+//#include <vector>
 #include <fstream>
-#include<string>
+#include <string.h>
  #include <iomanip>
+#include <cstring>
  using namespace std;
- using std::vector;
+ //using std::vector;
 
+//vector <string> vsss = {"aaa","bbb","ccc","ddd"};
+
+ // vector <string> vsss(sss,sss+4);
+char st1[]="Put on the old blue song";
+char *tokenst;
+int main()
+  {
+	  tokenst=strtok(st1," ");
+
+	  while(tokenst!=NULL)
+	  {
+		  cout<<tokenst<<'\n';
+		  tokenst=strtok(NULL, " ");
+	  }
+
+      return 0;
+  }
+
+ /*
  struct Person {
 	 string name;
 	 int age;
@@ -54,7 +74,7 @@ Per.push_back({Mname[i],intdim[i]});
 }
 	 for(auto el: Per)
 		 cout<<el.name<<setw(12-el.name.length())<<el.age<<endl;
-*/
+
 return 0;
 }
 //сорт конец*/
