@@ -1,48 +1,75 @@
-/*
- * Unit.cpp
- *
- *  Created on: 8 июн. 2023 г.
- *      Author: User
- */
+
+#include <vector>
+#include <fstream>
+#include <string.h>
+ #include <iomanip>
+#include <cstring>
+#include <iostream>
+using namespace std;
+ using std::cout;
+using std::endl;
 
 
- #include <iostream>
-// using namespace std;
- //using std::endl;
+class dimstrok{
+public:
+void Hello();
 
- #include "Class.h" // включить определение класса GradeBook
+void pokazat_massiv(char s[]){
+		 for(int i=1; i<=3; i++)
+		 {
+		cout<<i<<" "<<s<<endl;
 
- // функция main начинает исполнение программы
+		 }
+	 }
+///////////////
+void delenie(char *a)
+{
+char *tokenst;
 
+	  tokenst=strtok(a," ");
 
- int main()
- {
- // создать два объекта GradeBook;
- // исходное имя курса для gradeBookl слишком длинное
- GradeBook gradeBookl( "CS101 Programming in C++" );
- GradeBook gradeBook2( "CS102 C++ Data Structures" );
- GradeBook gradeBook3( "Dimon C++ Programming" );
- GradeBook test("1");
- // вывести courseName каждого GradeBook
+	    while(tokenst!=NULL)
+	  {
+        cout<<tokenst<<'\n';
+		  tokenst=strtok(NULL, " ");
+	  }
+}
 
- gradeBook3.displayMessage();
- cout <<   "gradeBooklf s initial course name is: "
- << gradeBookl.getCourseName()
- << "\ngradeBook2's initial course name is: "
- << gradeBook2.getCourseName() <<  "\ngradeBook3's initial course name is: "<<gradeBook3.getCourseName()<<endl;
+	 private:
 
- // модифицировать courseName для gradeBookl (корректной строкой)
-// gradeBookl.setCourseName( "CS101 C++ Programming" );
+string st1="Put on the old blue song";
 
- // вывести courseName каждого GradeBook
- cout << "\ngradeBookl's course name is: "
- << gradeBookl.getCourseName()
- << "\ngradeBook2's course name is: "
- << gradeBook2.getCourseName()
- << "\ngradeBook3's course name is: "
- << gradeBook3.getCourseName()
-<< endl;
- return 0; // показывает успешное завершение
- } // конец main
+ };
 
 
+vector <string> vsss = {"aaa","bbb","ccc","ddd"};
+
+ // vector <string> vsss(sss,sss+4);
+
+char st2[]="Put on the old blue song";
+
+//void zero(long a[]); //прототип
+void dimstrok::Hello()
+{
+cout <<"Hello world!"<<endl;
+
+ }
+int main()
+  {
+	dimstrok *obj;
+
+	      strcat(st2," hahaha");
+	      cout<<st2<<endl;
+
+for(auto el: vsss)
+	cout<<el<<" ";
+
+cout<<endl;
+obj->pokazat_massiv(st2);
+obj->delenie(st2);
+
+obj->Hello();
+
+
+return 0;
+  }

@@ -10,32 +10,29 @@
  using namespace std;
  //using std::vector;
 
-vector <string> vsss = {"aaa","bbb","ccc","ddd"};
+class dst{
+ public:
+	 void hello()
+	 {
+		 for(int i=0; i<=10; i++)
+cout<<st1<<endl;
+cout<<i1;
+	 }
+char *st1="Hello Dimsrt";
+ private:
+	 int i1=10;
 
- // vector <string> vsss(sss,sss+4);
-char st1[]="Put on the old blue song";
-char st2[]="Put on the old blue song";
-char *tokenst;
 
-void zero(long a[]); //прототип
+
+ };
+
 int main()
-  {
-	  tokenst=strtok(st1," ");
-	//
-	   //  tokenst=strtok(NULL," ");
-	    //  cout<<tokenst<<'\n';
-	      strcat(st2," hahaha");
-	      cout<<st2<<endl;
-
-
-	  while(tokenst!=NULL)
-	  {
-        cout<<tokenst<<'\n';
-		  tokenst=strtok(NULL, " ");
-	  }
-for(auto el: vsss)
-	cout<<el<<" ";
-      return 0;
+  {char st5[]="Hello Dimsrt";
+dst my;
+cout<<"H e l l o"<<endl;
+my.hello();
+cout<<st5;
+return 0;
   }
 
  /*
