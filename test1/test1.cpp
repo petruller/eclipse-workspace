@@ -14,24 +14,25 @@ class dst{
  public:
 	 void hello()
 	 {
-		 for(int i=0; i<=10; i++)
+	// i1=10;
+		 for(int i=0; i<=i1; i++)
 cout<<st1<<endl;
 cout<<i1;
 	 }
-char *st1="Hello Dimsrt";
+
  private:
-	 int i1=10;
-
-
-
+	 //char st1;//="Hello Dimsrt";
+	const int i1=7;
+	const char *st1="Hello Dimsrt";
  };
 
 int main()
-  {char st5[]="Hello Dimsrt";
-dst my;
+  {
+dst *my;
+my = new dst;
 cout<<"H e l l o"<<endl;
-my.hello();
-cout<<st5;
+my->hello();
+
 return 0;
   }
 
