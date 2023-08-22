@@ -48,6 +48,16 @@ vector <string> vsss = {"aaa","bbb","ccc","ddd"};
  // vector <string> vsss(sss,sss+4);
 
 char st2[]="Put on the old blue song";
+class Tem{
+public:
+	Tem(int =0);
+	void print1(){
+		cout<<"Hello "<<x<<endl;
+
+	}
+private:
+	int x;
+};
 
 //void zero(long a[]); //прототип
 void dimstrok::Hello()
@@ -55,8 +65,42 @@ void dimstrok::Hello()
 cout <<"Hello world!"<<endl;
 
  }
+
+Tem::Tem(int a)
+   : x(a)
+		   {
+
+		   }
 int main()
-  {
+
+{
+Tem aaa (1255);
+aaa.print1();
+for(auto el: vsss)
+	cout<<el<<endl;
+return 0;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+}
 	dimstrok *obj;
 obj = new dimstrok;
 	      strcat(st2," hahaha");
@@ -74,3 +118,4 @@ obj->Hello();
 
 return 0;
   }
+*/
