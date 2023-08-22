@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 class IP
@@ -30,12 +32,20 @@ private:
 int a,b,c,d;
 };
 int main() {
+	srand(time(0));
 	IP ip1(127,0,0,1);
 	IP ip2(32,122,255,200);
 
 	IP ip3 = ip1+ip2;
 
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << "Random IP`s" << endl; // prints !!!Hello World!!!
+	for(int i=1; i<=30;i++)
+	{
+		ip1 = IP (rand()%255, rand()%255, rand()%255, rand()%255);
+
+		//ip1 =IP (2,3,4,4);
+		cout<<"ip"<<i<<" = "<<ip1<<endl;
+	}
 	cout<<"ip1 = "<<ip1<<endl;
 	cout<<"ip2 = "<<ip2<<endl;
 	cout<<"ip3 = "<<ip3<<endl;
