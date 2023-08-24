@@ -8,8 +8,113 @@
  #include <iomanip>
 #include <cstring>
  using namespace std;
- //using std::vector;
 
+
+
+
+
+ class IP
+ {
+
+ public:
+	 IP(int a1, int b1, int c1, int d1) : a(a1),b(b1),c(c1),d(d1)
+		{
+	 }
+		IP operator+(const IP& tt) const //забыл const
+		{
+		int a2,b2,c2,d2;
+		a2=a+tt.a;
+		b2=b+tt.b;
+		c2=c+tt.c;
+		d2=d+tt.d;
+
+		return IP(a2,b2,c2,d2);
+		}
+		friend ostream& operator<<(ostream& a, const IP& tt)
+		{
+		a<<tt.a<<"."<<tt.b<<"."<<tt.c<<"."<<tt.d;
+		return a;
+		}
+private:
+	 int a,b,c,d;
+
+
+ };
+ int main()
+ {
+	 IP ip1=IP(2,2,2,2);
+	 IP ip2=IP(2,2,2,2);
+	 IP ip3=ip1+ip2;
+
+	 cout<<"Hello"<<endl<<ip1<<ip2<<ip3;
+
+	 return 0;
+ };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ class IP
+ {
+
+ public:
+	 IP(int a1, int b1, int c1, int d1): a(a1),b(b1),c(c1),d(d1)
+	 {}
+		IP operator+(const IP& tt) const
+		{
+		int a2,b2,c2,d2;
+		 a2= a+tt.a;
+		 b2=b+tt.b;
+		 c2=c+tt.c;
+		 d2=d+tt.d;
+
+		 return IP(a2,b2,c2,d2);
+
+		}
+		friend ostream& operator<<(ostream& os, const IP& tt1)
+		{
+			os<<tt1.a<<"."<<tt1.b<<"."<<tt1.c<<"."<<tt1.d;
+			return os;
+
+		}
+
+ private:
+	 int a,b,c,d;
+
+
+
+ };
+ int main()
+ {
+	 IP ip1=IP(12,12,12,13);
+	 IP ip2=IP(2,2,2,2);
+	 IP ip3=ip1+ip2;
+	 cout<<"Hello!"<<endl;
+	 cout<<ip1<<endl<<ip2<<endl<<"sum :"<<ip3;
+	 return 0;
+ }
+ //using std::vector;
+/*
 class dst{
  public:
 	 void hello()

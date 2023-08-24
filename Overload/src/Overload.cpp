@@ -18,10 +18,26 @@ public:
 {}
 
     IP operator+(const IP& other) const {
-    return IP(a + other.a, b + other.b, c + other.c, d + other.d);
+    int a2,b2,c2,d2;
+    a2=a + other.a;
+    if(a2>255)
+    a2=255;
+
+    b2=b + other.b;
+
+    c2= c + other.c;
+    if(c2>255)
+    c2=255;
+
+    d2= d + other.d;
+     if(d2>255)
+    d2=255;
+
+
+    return IP(a2,b2 ,c2,d2);
     }
 
-    friend ostream& operator<<(ostream& os, const IP& c)
+    friend ostream& operator<<(ostream& os, const IP& c)//учить
     {
    os<<c.a <<"."<<c.b<<"."<<c.c<<"."<<c.d;
    return os;
@@ -33,10 +49,11 @@ int a,b,c,d;
 };
 int main() {
 	srand(time(0));
-	IP ip1(127,0,0,1);
-	IP ip2(32,122,255,200);
+	IP ip1(120,0,0,0);
+	IP ipq1(127,0,254,1);
+	IP ipq2(32,122,65,200);
 
-	IP ip3 = ip1+ip2;
+	IP ipq3 = ipq1+ipq2;
 
 	cout << "Random IP`s" << endl; // prints !!!Hello World!!!
 	for(int i=1; i<=30;i++)
@@ -46,8 +63,8 @@ int main() {
 		//ip1 =IP (2,3,4,4);
 		cout<<"ip"<<i<<" = "<<ip1<<endl;
 	}
-	cout<<"ip1 = "<<ip1<<endl;
-	cout<<"ip2 = "<<ip2<<endl;
-	cout<<"ip3 = "<<ip3<<endl;
+	cout<<"ipq1 = "<<ipq1<<endl;
+	cout<<"ipq2 = "<<ipq2<<endl;
+	cout<<"ipq3 = "<<ipq3<<endl;
 	return 0;
 }
