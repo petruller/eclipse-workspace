@@ -9,18 +9,30 @@
 
  using std::endl;
  using std::fixed;
-
  #include <iomanip>
 using std::setprecision;
-
  #include "CommissionEmployee.h" // определение CommissionEmployee
 
- int main()
+class Shape{
+public:
+	virtual void Draw()=0;
+};
+
+
+class mycl:public Shape{
+public:
+	void Draw(){
+		cout<<"I`m draw now111"<<endl;
+	}
+};
+
+int main()
  {
  // создать объект CommissionEmployee
  CommissionEmployee employee(
  "Dima", "Tetus", "21-22-2222", 10000, .06 );
-
+Shape *mycomm;
+mycomm = new mycl;
  // установить формат вывода чисел с плавающей точкой
  cout << fixed << setprecision( 2 );
 
@@ -44,6 +56,7 @@ employee.setFirstName("Dimon");
 
  // вывести заработок служащего
  cout <<"\n\nEmployee's earnings: $"<< employee.earnings ()<< endl;
+ mycomm->Draw();
 
  return 0;
  } // конец main

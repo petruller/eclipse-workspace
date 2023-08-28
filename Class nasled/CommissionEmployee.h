@@ -16,6 +16,7 @@
  class CommissionEmployee
  {
  public:
+
  CommissionEmployee( const string &, const string &,
  const string &, double = 0.0, double = 0.0 );
 
