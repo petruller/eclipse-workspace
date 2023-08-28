@@ -25,11 +25,11 @@ int main()
 {
 const int aCount = 5;
 const int bCount = 7;
-const int cCount = 6;
+const int cCount = 5;
 
 int a[aCount] = {1,2,3,4,5};
 double b[bCount] = {1.1,2.2,3.3,4.4,5.5,6.6,7.7};
-char c[cCount] = "Hello";
+char c[cCount] = {'H','e','l','l','o'};
 
 cout << "Array a contians:"<<endl;
 
