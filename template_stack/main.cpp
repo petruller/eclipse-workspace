@@ -12,22 +12,27 @@
  #include "Stack.h" // определение шаблона класса Stack
 
  int main()
- {int ch=10;
+ {int ch=18;
  Stack< double > doubleStack( ch ); // размер 5
 
  double doubleValue = 1.1;
-
+double eps=0.00001;
  cout << "Pushing elements onto doublestack\n";
 
  // затолкнуть в doublestack 5 значений типа double
 while ( doubleStack.push( doubleValue ) )
 
- {
- cout << doubleValue << ' ';
- doubleValue += 1.1;
+ {cout << doubleValue << ' ';
+
+
+if(abs(doubleValue-10)<eps)
+	{cout << "10.0" << ' ';
+	doubleValue = 10.0;
+	}
+doubleValue += 1.1;
  } // конец while
 
- cout << "\nStack is full. " << doubleValue
+ cout << "\nStack is full" //<< doubleValue
  << "\n\nPopping elements from doubleStack\n";
 
  // вытолкнуть элементы из doublestack
@@ -51,7 +56,7 @@ while ( doubleStack.push( doubleValue ) )
   charValue++;
   } // конец while
 
-  cout << "\nStack is full. " << charValue
+  cout << "\nStack is full. " //<< charValue
   << "\n\nPopping elements from intStack\n";
 
   // вытолкнуть элементы из intStack
@@ -71,7 +76,7 @@ while ( doubleStack.push( doubleValue ) )
    intValue++;
    } // конец while
 
-   cout << "\nStack is full. " << intValue
+   cout << "\nStack is full. " //<< intValue
    << "\n\nPopping elements from intStack\n";
 
    // вытолкнуть элементы из intStack
