@@ -12,28 +12,44 @@
  #include <iomanip>
 
 using namespace std;
-/*
-struct Person {
-	int age;
-	string name;
+template <typename T>
+class My{
+public:
+
+
+	My(T d):data(d){}
+	 void Mes()
+	{
+
+		cout<< data<<endl;
+	}
+
+
+
+	private:
+	T data;
+
 };
-
-vector <Person> Per;
-//vector <int> age;*/
-
 
 
 
 int main()
-
-{string Mname[] = {"Alexander", "Dmitry", "Evgeny", "Ivan", "Kirill", "Maxim", "Nikolay", "Pavel", "Sergey", "Vladimir"};
-
-
-
-
+{
+string Mname[] = {"Alexander", "Dmitry", "Evgeny", "Ivan", "Kirill", "Maxim", "Nikolay", "Pavel", "Sergey", "Vladimir"};
+My<int> mil(11);
+mil.Mes();
 
 
+My<string>stt("www");
+stt.Mes();
 
+
+int arr=sizeof(Mname)/sizeof(Mname[0]);
+for(int i=0; i<arr; i++)
+	cout<<Mname[i]<<endl;
+
+return 0;
+}
 
 
 //--------------
@@ -44,8 +60,7 @@ for(int i=0; i<arr; i++)
 cout<<*str<<endl;
 str++;
 }
-
-//--------------*/
+//--------------
 
 
 
@@ -76,4 +91,4 @@ for(int i=0; i<sizearr;i++)
 	st++;
 
 }//*/
-}
+
