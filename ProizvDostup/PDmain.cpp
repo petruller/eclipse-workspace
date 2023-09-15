@@ -93,7 +93,7 @@ ofstream mot( "motor.dat", ios::binary );
 	 motor1.setoboroty(10000);
 	 motor1.settype("gas");
 	 motor1.setyear(1999);
-		 mot.write( reinterpret_cast<char *>(&motor1),sizeof( Motor) );
+		 mot.write( reinterpret_cast<const char *>(&motor1),sizeof( Motor) );//если что убать конст
 	 }
 	 cout<<"file is create";
 		}//r
@@ -110,10 +110,10 @@ ifstream mot( "motor.dat", ios::binary );
 
 mot.read(reinterpret_cast<char *>(&motor2),sizeof( Motor));
 
-	 //for(int i=0; i<20; i++)
+
 	while(mot &&!mot.eof()) //не работает while
 	 {
-//	cout<<motor2.getname()<<endl;
+
 
 	cout<<setw(2)<<motor2.getnum()<<" "<<motor2.getname()<<' '<<motor2.getoboroty()<<' '<<motor2.gettype()<<' '<<
 			motor2.getyear()<<endl;
