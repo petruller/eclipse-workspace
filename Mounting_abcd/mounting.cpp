@@ -11,35 +11,32 @@
 using namespace std;
 
 int main()
-{ string S="abcdefghlijklmnopqrstuvwxyz}";
-int a,b;
-for(int i=0; i<=14; i++)
 {
+string S="abcdefghijklmnopqrstuvwxyz}";
+int a,f;
+ for(int i=0; i<14; i++)
+ {
     if (i==0)
-    {cout<<setw(15)<<S[0]<<endl;}
+    cout<<setw(15)<<S[0]<<endl;
     else
-    {a=b=i;
+    {a=i; f=0;
+    cout<<setw(15-i);
 
-       cout<<setw(15-i);
-                while(b!=0)
+       while(f!=i+1)
         {
-        cout<<S[b];
-        b--;
+        cout<<S[a];
+        a++;
+        f++;
         }
-        while(b!=a+1)
+       while(a!=i+1)
         {
-        cout<<S[b];
-        b++;
+        cout<<S[a-2];
+        a--;
         }
-
-
-       // cout<<S[b];
 
     cout<<endl;
-    }
-
-
-}
+    }//else
+}///for
 
     return 0;
 }
