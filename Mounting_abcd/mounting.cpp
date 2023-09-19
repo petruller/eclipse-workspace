@@ -81,18 +81,6 @@ int seconds = 0;
   cin.get();
   std::cout << std::endl << "Timer stopped after " << seconds << " seconds" << std::endl;
 
-/*
-int n=60;
-   while (n) {
-
-    cout << ".";
-    n--;
-  //  if((c = getchar()) == ' ')
-//		goto sss;
-   //  cout.flush(); // очистка буфера вывода
-      sleep(1);
-   }
-//sss:*/
     return 0;
 }
 
