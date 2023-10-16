@@ -18,25 +18,25 @@
  // push вызывает функцию insertAtFront класса List
  void push( const STACKTYPE &data )
  {
-insertAtFront( data );
+this->insertAtFront( data );
  } // конец функции push
 
  // pop вызывает функцию removeFromFront класса List
  bool pop( STACKTYPE &data )
  {
- return  removeFromFront( data );
+ return  this->removeFromFront( data );
  } // конец функции pop
 
  // isStackEmpty вызывает функцию isEmpty класса List
  bool isStackEmpty() const
  {
- return  isEmpty();
+ return  this->isEmpty();
  } // конец функции isStackEmpty
 
  // printStack вызывает функцию print класса List
  void printStack() const
  {
-	print();
+	this->print();
  } // конец функции print
  }; // конец класса Stack
 

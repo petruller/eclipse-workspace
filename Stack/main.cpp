@@ -12,86 +12,52 @@ using std::cin;
 
 #include <string>
 using std::string;
-//#include "Stack.h" // определение класса Stack
-//#include "list.h"
-#include "list.h" // определение класса List
-/*
- template< typename STACKTYPE >
- class Stack :  List< STACKTYPE >
- {
- public:
- // push вызывает функцию insertAtFront класса List
-/* void push( const STACKTYPE &data )
- {
-insertAtFront( data );
- } // конец функции push
 
- // pop вызывает функцию removeFromFront класса List
- bool pop( STACKTYPE &data )
- {
- return  removeFromFront( data );
- } // конец функции pop
-
- // isStackEmpty вызывает функцию isEmpty класса List
- bool isStackEmpty() const
- {
- return  isEmpty();
- } // конец функции isStackEmpty
-
- // printStack вызывает функцию print класса List
- void printStack() const
- {
-	print();
- } // конец функции print
- }; // конец класса Stack
-
-*/
+#include "stack.h" // определение класса List
 
 int main()
  {
- List< int > intStack; // создать стек для значений int
+ Stack< int > intStack; // создать стек для значений int
 
  cout << "processing an integer Stack" << endl;
 
  // затолкнуть в intStack целые значения
- for ( int i = 0; i < 3; i++ )
+ for ( int i = 0; i < 10; i++ )
  {
- intStack.insertAtFront( i );
- intStack.print();
+ intStack.push( i );
+ intStack.printStack();
  } // конец for
 
  int poplnteger; // сохраняет int, вытолкнутое из стека
 
  // вытолкнуть целые из intStack
- while ( !intStack.isEmpty() )
+ while ( !intStack.isStackEmpty() )
  {
- intStack.removeFromFront( poplnteger );
+ intStack.pop( poplnteger );
  cout << poplnteger << " popped from stack" << endl;
- intStack.print();
+ intStack.printStack();
  } // конец while
 
- List< double > doubleStack; // создать стек для значений double
+ Stack< double > doubleStack; // создать стек для значений double
  double value = 1.1;
 
  cout << "processing a double Stack" << endl;
 
  // затолкнуть в doubleStack значения с плавающей точкой
- for ( int j = 0; j < 3; j++ )
+ for ( int j = 0; j < 9; j++ )
  {
- doubleStack.insertAtFront( value );
- doubleStack.print();
+ doubleStack.push( value );
+ doubleStack.printStack();
  value += 1.1;
  } // конец for
 
  double popDouble; // сохраняет double, вытолкнутое из стека
 
- // вытолкнуть значения с плавающей точкой из doubleStack
-
-while ( !doubleStack.isEmpty() )
+while ( !doubleStack.isStackEmpty() )
  {
- doubleStack.removeFromFront( popDouble );
+ doubleStack.pop( popDouble );
  cout << popDouble << " popped from stack" << endl;
- doubleStack.print();
+ doubleStack.printStack();
  } // конец while
 
  return 0;
