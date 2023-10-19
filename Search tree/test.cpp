@@ -68,24 +68,22 @@ int main() {
     root = insertNode(root, 15);
     root = insertNode(root, 8);
     root = insertNode(root, 3);
-    cout<<"My tree:"<<endl;
- printTree(root);
-cout <<endl;
+    printTree(root);
+   cout <<endl;
 
-    if (searchNode(root, 8)) {
-        cout <<"Number "<< 8<<"- Found" << endl;
-    }
-    else {
-        cout << "Not Found" << endl;
-    }
+       if (searchNode(root, 8)) {
+           cout <<"Number "<< 8<<"- Found" << endl;
+       }
+       else {
+           cout << "Not Found" << endl;
+       }
 
-    if (searchNode(root, 20)) {
-        cout <<"Number 20 Found" << endl;
-    }
-    else {
-        cout << "Number 20 - Not Found" << endl;
-    }
-
+       if (searchNode(root, 20)) {
+           cout <<"Number 20 Found" << endl;
+       }
+       else {
+           cout << "Number 20 - Not Found" << endl;
+       }
 
 
     return 0;
