@@ -56,7 +56,7 @@ void freemem (tnode *tree)
 int main() {
 //int a[]={3,55,5,12,2,8,25,11};
 	 srand( time(0));
-	 const int arraySize =20; // размер массива а
+	 const int arraySize =27; // размер массива а
 	int a[ arraySize ];// = {56, 360, 327, 350, 815, 177, 518, 907, 130, 188, 896, 553, 764, 1, 640, 409, 142, 751, 954, 218}; // инициализация массива
 
 	cout<<"Source Array:"<<endl;
